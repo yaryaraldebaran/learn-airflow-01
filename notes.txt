@@ -15,3 +15,5 @@ run ini setiap mau run scheduler, jangan hanya "airflow scheduler"
 - Urutan tiap load 
     1. apache scheduler 
     2. apache webserver 
+
+    this is changed 
