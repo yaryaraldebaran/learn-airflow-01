@@ -1,3 +1,5 @@
+this tutorial is based on playlist : https://youtube.com/playlist?list=PLwFJcsJ61oujAqYpMp1kdUBcPG0sE0QMT
+
 - python3 -m venv env_airflow
 - pip3 install "apache-airflow[celery]==2.5.3" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.5.3/constraints-3.9.txt"
 - export AIRFLOW_HOME=/home/ahyar/Documents/tut_folder/tut_python/python_script/tut_airflow (harus static path)
