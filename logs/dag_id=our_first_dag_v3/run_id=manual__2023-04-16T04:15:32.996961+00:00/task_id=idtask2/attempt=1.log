@@ -1,0 +1,28 @@
+[2023-04-16T11:15:36.547+0700] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: our_first_dag_v3.idtask2 manual__2023-04-16T04:15:32.996961+00:00 [queued]>
+[2023-04-16T11:15:36.550+0700] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: our_first_dag_v3.idtask2 manual__2023-04-16T04:15:32.996961+00:00 [queued]>
+[2023-04-16T11:15:36.550+0700] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-16T11:15:36.551+0700] {taskinstance.py:1289} INFO - Starting attempt 1 of 6
+[2023-04-16T11:15:36.551+0700] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-16T11:15:36.563+0700] {taskinstance.py:1309} INFO - Executing <Task(BashOperator): idtask2> on 2023-04-16 04:15:32.996961+00:00
+[2023-04-16T11:15:36.565+0700] {standard_task_runner.py:55} INFO - Started process 13622 to run task
+[2023-04-16T11:15:36.567+0700] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'our_first_dag_v3', 'idtask2', 'manual__2023-04-16T04:15:32.996961+00:00', '--job-id', '224', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpfyeoxoyk']
+[2023-04-16T11:15:36.569+0700] {standard_task_runner.py:83} INFO - Job 224: Subtask idtask2
+[2023-04-16T11:15:36.596+0700] {task_command.py:389} INFO - Running <TaskInstance: our_first_dag_v3.idtask2 manual__2023-04-16T04:15:32.996961+00:00 [running]> on host ahyar-Aspire-A514-54
+[2023-04-16T11:15:36.633+0700] {taskinstance.py:1516} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ahyar
+AIRFLOW_CTX_DAG_ID=our_first_dag_v3
+AIRFLOW_CTX_TASK_ID=idtask2
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-16T04:15:32.996961+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-16T04:15:32.996961+00:00
+[2023-04-16T11:15:36.634+0700] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-04-16T11:15:36.635+0700] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo this is second task']
+[2023-04-16T11:15:36.640+0700] {subprocess.py:86} INFO - Output:
+[2023-04-16T11:15:36.641+0700] {subprocess.py:93} INFO - this is second task
+[2023-04-16T11:15:36.641+0700] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-04-16T11:15:36.655+0700] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=our_first_dag_v3, task_id=idtask2, execution_date=20230416T041532, start_date=20230416T041536, end_date=20230416T041536
+[2023-04-16T11:15:36.699+0700] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-16T11:15:36.714+0700] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
