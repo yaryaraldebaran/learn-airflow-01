@@ -16,4 +16,5 @@ run ini setiap mau run scheduler, jangan hanya "airflow scheduler"
     1. apache scheduler 
     2. apache webserver 
 
-    this is changed 
+- to use postgresql operator, install postgre operator
+    -> pip3 install 'apache-airflow[postgres]'
