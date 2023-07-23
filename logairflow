@@ -1,0 +1,48 @@
+ 1930  mkdir airflow
+ 1932  pip3 install "apache-airflow[celery]==2.5.3" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.5.3/constraints-3.9.txt"
+ 1933  pip install "apache-airflow[celery]==2.5.3" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.5.3/constraints-3.9.txt"
+ 1934  pip uninstall airflow
+ 1935  pip3 uninstall airflow
+ 1938  cd tut_airflow/
+ 1939  export AIRFLOW_HOME=~/Documents/tut_folder/tut_python/learn_flask/tut_airflow
+ 1941  airflow scheduler
+ 1951  sudo pip3 uninstall airflow
+ 1952  sudo pip uninstall airflow
+ 1957  pip3 install airflow
+ 1958  pip3 install apache-airflow
+ 1964  airflow db init
+ 1965  cd tut_airflow/
+ 1966  airflow db init
+ 1967  airflow webserver -p 8080
+ 1968  airflow users create --help
+ 1969  airflow users create --username ahyar --firstname ahyar --lastname ibrahim --role Admin --email ahyaraldebaran97@gmail.com
+ 1970  airflow webserver -p 8080
+ 1971  airflow webserver -D
+ 1972  airflow scheduler -D
+ 1973  ps aux | grep airflow 
+ 1974  kill $(cat ~/Documents/tut_folder/tut_python/learn_flask/tut_airflow/airflow-scheduler.pid)
+ 1975  kill $(ps -o ppid= -p $(cat ~/Documents/tut_folder/tut_python/learn_flask/tut_airflow/airflow-webserver.pid))
+ 1978  kill $(ps -o ppid= -p $(cat ~/Documents/tut_folder/tut_python/learn_flask/airflow-webserver.pid))
+ 1979  sudo kill $(ps -o ppid= -p $(cat ~/Documents/tut_folder/tut_python/learn_flask/airflow-webserver.pid))
+ 1980  ps aux | grep airflow 
+ 1981  sudo kill $(ps -o ppid= -p $(cat ~/Documents/tut_folder/tut_python/learn_flask/airflow-webserver.pid))
+ 1982  sudo kill $(ps -o ppid= -p $(cat ~/Documents/tut_folder/tut_python/learn_flask/airflow-scheduler.pid))
+ 1983  ps aux | grep airflow 
+ 1984  kill $(ps -ef | grep "airflow scheduler" | awk '{print $2}')
+ 1985  ps aux | grep airflow 
+ 1986  cat airflow-scheduler.pid | xargs kill
+ 1987  cat airflow-webserver.pid | xargs kill
+ 1988  ps aux | grep airflow 
+ 1992  cd tut_airflow/
+ 1993  export AIRFLOW_HOME=~/Documents/tut_folder/tut_python/learn_flask/tut_airflow
+ 1995  source /home/ahyar/Documents/tut_folder/tut_python/python_script/tut_airflow/env_airflow/bin/activate
+ 1996  pip install "apache-airflow[celery]==2.5.3" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.5.3/constraints-3.9.txt"
+ 1997  airflow webserver -p 8080
+ 1998  airflow db init
+ 1999* pip install "apache-airflow[celery]==2.5.3" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.5.3/constraints-3.9.txt
+ 2000  airflow initdb
+ 2001  airflow init db
+ 2002  airflow db init
+ 2003  pip3 install apache-airflow[cncf.kubernetes]
+ 2004  airflow db init
+ 2005  history | grep airflow > logairflow

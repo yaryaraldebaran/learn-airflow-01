@@ -1,0 +1,19 @@
+- python3 -m venv env_airflow
+- pip3 install "apache-airflow[celery]==2.5.3" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.5.3/constraints-3.9.txt"
+- export AIRFLOW_HOME=/home/ahyar/Documents/tut_folder/tut_python/python_script/tut_airflow (harus static path)
+- airflow db init
+- airflow users create           --username ahyar           --firstname ahyar           --lastname aldebaran           --role Admin           --email ahyaraldebaran97@gmail.com
+- exit the venv then activate a scheduler
+run ini setiap mau run scheduler, jangan hanya "airflow scheduler"
+--export AIRFLOW_HOME=/home/ahyar/Documents/tut_folder/tut_python/python_script/tut_airflow
+- airflow scheduler
+- install pandas
+
+- user : ahyar 
+- password : shanpark201
+
+- Urutan tiap load 
+    1. apache scheduler 
+    2. apache webserver 
+
+    this is changed 
