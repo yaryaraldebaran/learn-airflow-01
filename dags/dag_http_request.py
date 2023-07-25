@@ -3,6 +3,7 @@ from airflow import DAG
 from airflow.providers.http.operators.http import SimpleHttpOperator
 from airflow.operators.python import PythonOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
+from airflow.providers.postgres.hooks.postgres import PostgresHook
 import json
 
 
@@ -32,16 +33,27 @@ def process_response(response,ti):
         "temp":temp,
         "windspeed":windspeed
     }
-    #push to xcom 
     ti.xcom_push(key='dict_data',value=dict_data)    
-def tes_xcomm(ti):
-    print(ti.xcom_pull(task_ids="process_response"))
+
+def insert_to_postgres(ti):
+    # Retrieve the XCom values
+    xcom_values = ti.xcom_pull(task_ids='process_response',key='dict_data')
+    key1_value = xcom_values['cityname']
+    key2_value = xcom_values['description']
+    key3_value = xcom_values['temp']
+    key4_value = xcom_values['windspeed']
+    
+    sql_query = f"INSERT INTO weather (city_name,description,temperature,windspeed) VALUES ('{key1_value}', '{key2_value}','{key3_value}','{key4_value}');"
+    
+    hook = PostgresHook(postgres_conn_id='postgres_localhost')
+    hook.run(sql_query)
+
 
 with DAG(
     dag_id='dag_with_http_request',
     default_args=default_args,
-    start_date=datetime(2023,7,24),
-    schedule_interval='0 0 * * *'
+    start_date=datetime(2023,7,25),
+    schedule_interval='*/3 * * * *'
 )as dag:
     http_request_task = SimpleHttpOperator(
         task_id='simple_http_request',
@@ -77,31 +89,10 @@ with DAG(
         )
         """   
     )
-    tesxcomm=PythonOperator(
-        task_id='testpull',
-        python_callable=tes_xcomm,
+    insert_postgres_data=PythonOperator(
+        task_id='insert_to_postgres',
+        python_callable=insert_to_postgres,
+        provide_context=True,
         dag=dag
     )
-    # insert_postgres_data=PostgresOperator(
-    #     task_id = "insert_postgres_data",
-    #     postgres_conn_id='postgres_localhost',
-    #     sql="""
-    #     INSERT INTO weather(city_name,temp,description,windspeed) VALUES (
-    #         '{{ ti.xcom_pull(task_ids='process_response')['dict_data']['cityname'] }}', 
-    #         '{{ ti.xcom_pull(task_ids='process_response')['dict_data']['description'] }}',
-    #         '{{ ti.xcom_pull(task_ids='process_response')['dict_data']['temp'] }}',
-    #         '{{ ti.xcom_pull(task_ids='process_response')['dict_data']['windspeed'] }}'
-    #         );
-    #     """,
-    #     autocommit=True,
-    #     )
-    #create task that consume the xcom using PostgresOperator 
-    #insert every key and value from the xcom dictionary
-    http_request_task>>process_response_task>>create_postgres_table>>tesxcomm
-
-# {
-#     "coord": {
-#         "lon": 106.882,
-#         "lat": -6.2
-#     }
-# }
+    http_request_task>>process_response_task>>create_postgres_table>>insert_postgres_data

@@ -12,6 +12,7 @@ default_args = {
 def get_name(ti):
     ti.xcom_push(key='first_name',value='boim')
     ti.xcom_push(key='last_name',value='ald')
+    
 
 def greet(age,ti):
     first_name = ti.xcom_pull(task_ids='get_name',key='first_name')

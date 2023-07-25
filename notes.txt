@@ -20,3 +20,5 @@ run ini setiap mau run scheduler, jangan hanya "airflow scheduler"
 
 - to use postgresql operator, install postgre operator
     -> pip3 install 'apache-airflow[postgres]'
+
+- if operator didn't work, use hooks

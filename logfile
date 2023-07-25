@@ -1,0 +1,61 @@
+2023-07-25 22:37:43.967 WIB [6340] LOG:  starting PostgreSQL 15.0 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 11.2.0-7ubuntu2) 11.2.0, 64-bit
+2023-07-25 22:37:43.967 WIB [6340] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-07-25 22:37:43.971 WIB [6340] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-07-25 22:37:43.984 WIB [6343] LOG:  database system was shut down at 2023-07-25 00:29:14 WIB
+2023-07-25 22:37:43.993 WIB [6340] LOG:  database system is ready to accept connections
+2023-07-25 22:39:45.430 WIB [7036] ERROR:  syntax error at or near "ti" at character 91
+2023-07-25 22:39:45.430 WIB [7036] STATEMENT:  
+	        INSERT INTO weather(city_name,temp,description,windspeed) VALUES (
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''cityname'']'', 
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''description'']'',
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''temp'']'',
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''windspeed'']''
+	            );
+	        
+2023-07-25 22:40:39.190 WIB [7432] ERROR:  syntax error at or near "ti" at character 91
+2023-07-25 22:40:39.190 WIB [7432] STATEMENT:  
+	        INSERT INTO weather(city_name,temp,description,windspeed) VALUES (
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''cityname'']'', 
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''description'']'',
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''temp'']'',
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''windspeed'']''
+	            );
+	        
+2023-07-25 22:42:44.082 WIB [6341] LOG:  checkpoint starting: time
+2023-07-25 22:42:44.100 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.002 s, total=0.019 s; sync files=2, longest=0.002 s, average=0.001 s; distance=0 kB, estimate=0 kB
+2023-07-25 22:44:47.927 WIB [8032] ERROR:  syntax error at or near "ti" at character 91
+2023-07-25 22:44:47.927 WIB [8032] STATEMENT:  
+	        INSERT INTO weather(city_name,temp,description,windspeed) VALUES (
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''cityname'']'', 
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''description'']'',
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''temp'']'',
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''windspeed'']''
+	            );
+	        
+2023-07-25 22:45:41.222 WIB [8198] ERROR:  syntax error at or near "ti" at character 91
+2023-07-25 22:45:41.222 WIB [8198] STATEMENT:  
+	        INSERT INTO weather(city_name,temp,description,windspeed) VALUES (
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''cityname'']'', 
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''description'']'',
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''temp'']'',
+	            ''ti.xcom_pull(task_ids=''process_response'')[''dict_data''][''windspeed'']''
+	            );
+	        
+2023-07-25 22:52:44.292 WIB [6341] LOG:  checkpoint starting: time
+2023-07-25 22:52:44.623 WIB [6341] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.307 s, sync=0.005 s, total=0.333 s; sync files=4, longest=0.003 s, average=0.002 s; distance=1 kB, estimate=1 kB
+2023-07-25 23:02:44.821 WIB [6341] LOG:  checkpoint starting: time
+2023-07-25 23:02:45.039 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.203 s, sync=0.004 s, total=0.218 s; sync files=3, longest=0.003 s, average=0.002 s; distance=1 kB, estimate=1 kB
+2023-07-25 23:07:44.119 WIB [6341] LOG:  checkpoint starting: time
+2023-07-25 23:07:44.543 WIB [6341] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.405 s, sync=0.003 s, total=0.425 s; sync files=5, longest=0.002 s, average=0.001 s; distance=16 kB, estimate=16 kB
+2023-07-25 23:27:44.941 WIB [6341] LOG:  checkpoint starting: time
+2023-07-25 23:27:45.169 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.205 s, sync=0.004 s, total=0.228 s; sync files=3, longest=0.003 s, average=0.002 s; distance=1 kB, estimate=14 kB
+2023-07-25 23:32:44.266 WIB [6341] LOG:  checkpoint starting: time
+2023-07-25 23:32:44.384 WIB [6341] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.103 s, sync=0.005 s, total=0.119 s; sync files=2, longest=0.003 s, average=0.003 s; distance=1 kB, estimate=13 kB
+2023-07-25 23:37:44.481 WIB [6341] LOG:  checkpoint starting: time
+2023-07-25 23:37:44.705 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.204 s, sync=0.003 s, total=0.224 s; sync files=3, longest=0.003 s, average=0.001 s; distance=8 kB, estimate=13 kB
+2023-07-25 23:42:44.805 WIB [6341] LOG:  checkpoint starting: time
+2023-07-25 23:42:45.522 WIB [6341] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.704 s, sync=0.005 s, total=0.718 s; sync files=8, longest=0.003 s, average=0.001 s; distance=21 kB, estimate=21 kB
+2023-07-25 23:52:29.250 WIB [6341] LOG:  checkpoint starting: time
+2023-07-25 23:52:29.769 WIB [6341] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.505 s, sync=0.004 s, total=0.520 s; sync files=5, longest=0.003 s, average=0.001 s; distance=23 kB, estimate=23 kB
+2023-07-25 23:57:29.838 WIB [6341] LOG:  checkpoint starting: time
+2023-07-25 23:57:30.567 WIB [6341] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.705 s, sync=0.006 s, total=0.729 s; sync files=8, longest=0.004 s, average=0.001 s; distance=21 kB, estimate=23 kB
