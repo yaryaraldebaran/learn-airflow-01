@@ -6,3 +6,4 @@ This is my personal repository to learn apache airflow. So far this repo has cov
 - PostGresSQL Operator
 - CRON expression
 - HTTP Request
+- File sensor
