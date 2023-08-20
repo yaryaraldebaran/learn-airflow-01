@@ -33,3 +33,8 @@ city_name =EXCLUDED.city_name,
 temperature= EXCLUDED.temperature,
 description = EXCLUDED.description
 ;
+
+ignore added files 
+git rm -r --cached path/to/your-folder
+git commit -m "Remove and ignore folder"
+git push
