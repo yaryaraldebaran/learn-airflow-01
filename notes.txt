@@ -15,8 +15,8 @@ run ini setiap mau run scheduler, jangan hanya "airflow scheduler"
 - password : shanpark201
 
 - Urutan tiap load 
-    1. apache scheduler 
-    2. apache webserver 
+    1. airflow scheduler 
+    2. airflow webserver 
 
 - to use postgresql operator, install postgre operator
     -> pip3 install 'apache-airflow[postgres]'
