@@ -59,3 +59,23 @@
 2023-07-25 23:52:29.769 WIB [6341] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.505 s, sync=0.004 s, total=0.520 s; sync files=5, longest=0.003 s, average=0.001 s; distance=23 kB, estimate=23 kB
 2023-07-25 23:57:29.838 WIB [6341] LOG:  checkpoint starting: time
 2023-07-25 23:57:30.567 WIB [6341] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.705 s, sync=0.006 s, total=0.729 s; sync files=8, longest=0.004 s, average=0.001 s; distance=21 kB, estimate=23 kB
+2023-07-26 00:02:29.666 WIB [6341] LOG:  checkpoint starting: time
+2023-07-26 00:02:29.885 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.204 s, sync=0.004 s, total=0.220 s; sync files=3, longest=0.003 s, average=0.002 s; distance=1 kB, estimate=20 kB
+2023-07-26 00:07:29.984 WIB [6341] LOG:  checkpoint starting: time
+2023-07-26 00:07:30.212 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.204 s, sync=0.004 s, total=0.228 s; sync files=3, longest=0.003 s, average=0.002 s; distance=1 kB, estimate=19 kB
+2023-07-26 00:12:29.310 WIB [6341] LOG:  checkpoint starting: time
+2023-07-26 00:12:29.528 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.204 s, sync=0.004 s, total=0.219 s; sync files=3, longest=0.003 s, average=0.002 s; distance=2 kB, estimate=17 kB
+2023-07-26 00:17:29.626 WIB [6341] LOG:  checkpoint starting: time
+2023-07-26 00:17:29.847 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.204 s, sync=0.005 s, total=0.222 s; sync files=3, longest=0.003 s, average=0.002 s; distance=2 kB, estimate=15 kB
+2023-07-26 00:22:29.946 WIB [6341] LOG:  checkpoint starting: time
+2023-07-26 00:22:30.174 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.205 s, sync=0.004 s, total=0.228 s; sync files=3, longest=0.003 s, average=0.002 s; distance=2 kB, estimate=14 kB
+2023-07-26 00:27:30.279 WIB [6341] LOG:  checkpoint starting: time
+2023-07-26 00:27:30.500 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.205 s, sync=0.004 s, total=0.221 s; sync files=3, longest=0.003 s, average=0.002 s; distance=2 kB, estimate=13 kB
+2023-07-26 00:32:30.599 WIB [6341] LOG:  checkpoint starting: time
+2023-07-26 00:32:30.817 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.204 s, sync=0.005 s, total=0.218 s; sync files=3, longest=0.003 s, average=0.002 s; distance=2 kB, estimate=12 kB
+2023-07-26 00:36:12.802 WIB [6340] LOG:  received smart shutdown request
+2023-07-26 00:36:12.811 WIB [6340] LOG:  background worker "logical replication launcher" (PID 6346) exited with exit code 1
+2023-07-26 00:36:12.811 WIB [6341] LOG:  shutting down
+2023-07-26 00:36:12.820 WIB [6341] LOG:  checkpoint starting: shutdown immediate
+2023-07-26 00:36:12.852 WIB [6341] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.007 s, total=0.041 s; sync files=3, longest=0.005 s, average=0.003 s; distance=2 kB, estimate=11 kB
+2023-07-26 00:36:12.855 WIB [6340] LOG:  database system is shut down

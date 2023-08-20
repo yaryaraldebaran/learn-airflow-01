@@ -22,3 +22,14 @@ run ini setiap mau run scheduler, jangan hanya "airflow scheduler"
     -> pip3 install 'apache-airflow[postgres]'
 
 - if operator didn't work, use hooks
+- buat return nihil jika tidak mau ada return 
+
+- UPSERT TUTORIAL 
+INSERT INTO weather (id,city_name, temperature, description) 
+VALUES(120,'Jakarta Special Capital Region On Conflict2', '300.452','scattered clouds baru2')
+ON CONFLICT (id,city_name) 
+do update set 
+city_name =EXCLUDED.city_name,
+temperature= EXCLUDED.temperature,
+description = EXCLUDED.description
+;
