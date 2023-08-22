@@ -4,7 +4,7 @@ from airflow.providers.http.operators.http import SimpleHttpOperator
 from airflow.operators.python import PythonOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
-from util.util import input_sql_from_csv
+from util.util import *
 import json
 
 default_args = {"owner": "ahyar", "retries": 5, "retry_delay": timedelta(minutes=5)}
@@ -18,7 +18,7 @@ dag_object = DAG(
 
 def upsert_to_postgres():
     # Retrieve the XCom values
-    data_to_input = input_sql_from_csv()
+    data_to_input = input_sql_from_csv_try()
     print(data_to_input)
     hook = PostgresHook(postgres_conn_id="postgres_localhost")
     for datas in data_to_input:
@@ -30,10 +30,6 @@ temperature= EXCLUDED.temperature,
 description = EXCLUDED.description
 ;"""    
         hook.run(sql_query)
-    
-
-    
-    
 
 upsert_postgres_data=PythonOperator(
         task_id='upsert_to_postgres',
