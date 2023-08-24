@@ -38,3 +38,6 @@ ignore added files
 git rm -r --cached path/to/your-folder
 git commit -m "Remove and ignore folder"
 git push
+
+
+- https://rapidapi.com/fyhao/api/currency-exchange/
