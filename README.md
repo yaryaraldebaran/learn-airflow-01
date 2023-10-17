@@ -7,3 +7,5 @@ This is my personal repository to learn apache airflow. So far this repo has cov
 - CRON expression
 - HTTP Request
 - File sensor
+- Dag Dependency (Dataset)
+- Dag Dependency (TriggerDagRunOperator)
