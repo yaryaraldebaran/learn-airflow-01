@@ -2,7 +2,7 @@ from airflow.decorators import dag,task
 from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from datetime import datetime
 
-@dag(start_date=datetime(2023, 8, 24), schedule='@daily', catchup=False)
+@dag(start_date=datetime(2023, 10, 16), schedule_interval='*/5 * * * *', catchup=False)
 def controller():
 
 	@task
