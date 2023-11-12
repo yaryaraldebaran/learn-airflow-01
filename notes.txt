@@ -41,3 +41,6 @@ git push
 
 
 - https://rapidapi.com/fyhao/api/currency-exchange/
+
+
+you can change dag folder on airflow.cfg in line 'dags_folder'
