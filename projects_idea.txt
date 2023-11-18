@@ -1,0 +1,36 @@
+=====REST API 
+- football related data 
+    -> UCL live score 
+        - live score per match stats (assist, goals, yellow card, red card )
+    -> top scorer
+    -> EPL
+- weather api data for Jakarta/Tangerang region  
+- harga rupiah 
+- exchange rate asean country
+
+=====READ CSV
+- kaggle datas 
+    -> find the one that can update periodically
+
+- rent house 
+- lending company 
+- daily stocks data
+    https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks
+
+- spotify top 5 daily
+    https://www.kaggle.com/datasets/prathamsaraf1389/spotify-global-top-50-daily-update
+
+- global currency
+    https://www.kaggle.com/datasets/usamabuttar/global-currency-historical-prices-updated-daily
+
+- weekly job salaries data (*)
+    https://www.kaggle.com/datasets/lorenzovzquez/data-jobs-salaries/data 
+
+- MAANG companies stock prices 
+    https://www.kaggle.com/datasets/nikhil1e9/netflix-stock-price
+
+- Top 20 Play Store App Reviews (Daily Update)
+    https://www.kaggle.com/datasets/odins0n/top-20-play-store-app-reviews-daily-update
+
+- exchange rate 
+    https://v6.exchangerate-api.com/v6/f741749eafc757aebaf6af77/latest/IDR

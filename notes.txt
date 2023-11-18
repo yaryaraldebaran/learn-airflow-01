@@ -37,10 +37,12 @@ description = EXCLUDED.description
 ignore added files 
 git rm -r --cached path/to/your-folder
 git commit -m "Remove and ignore folder"
-git push
+git push -u origin main 
 
 
 - https://rapidapi.com/fyhao/api/currency-exchange/
 
 
 you can change dag folder on airflow.cfg in line 'dags_folder'
+
+===============================================================================================================
