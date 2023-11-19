@@ -44,5 +44,9 @@ git push -u origin main
 
 
 you can change dag folder on airflow.cfg in line 'dags_folder'
-
+kenapa ketika airflow pull ulang, harus membuat user?
+set configuration file
+airflow config list 
+airflow db init
+export AIRFLOW_HOME=.
 ===============================================================================================================
